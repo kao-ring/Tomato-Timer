@@ -12,8 +12,18 @@ var totalSeconds = 0;
 var secondsElapsed = 0;
 var interval;
 
+
+function init() {
+  console.log("init");
+  minutesDisplay.innerHTML = '';
+  secondsDisplay.innerHTML = '';
+  totalSeconds = 0;
+}
 function startTimer() {
   // Write code to start the timer here
+  totalSeconds = workMinutesInput.getAttribute("value") * 60;
+  console.log(totalSeconds);
 }
 
 playButton.addEventListener("click", startTimer);
+init();
